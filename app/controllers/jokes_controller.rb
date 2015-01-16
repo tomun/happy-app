@@ -28,10 +28,10 @@ class JokesController < ApplicationController
 
     respond_to do |format|
       if @joke.save
-        format.html { redirect_to @joke, notice: 'Joke was successfully created.' }
+        format.html { redirect_to new_joke_path, notice: 'Joke was successfully created.' }
         format.json { render :show, status: :created, location: @joke }
       else
-        format.html { render :new }
+        format.html { render :new, notice: "Didn't save, try again"}
         format.json { render json: @joke.errors, status: :unprocessable_entity }
       end
     end
