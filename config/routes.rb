@@ -3,6 +3,11 @@ Rails.application.routes.draw do
 
   resources :jokes
 
+  get 'happy', to: 'happy#index'
+
+  match 'happy/random_joke', to: 'happy#random_joke', via: [:post]
+  match 'happy/random_quote', to: 'happy#random_quote', via: [:post]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
