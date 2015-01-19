@@ -3,10 +3,12 @@
 <table style="width:0%">
 	<tr>
 		<td>
-			<%= button_to 'Pearl of Wisdom', happy_random_quote_path, method: :post %>
+			<%#= button_to 'Pearl of Wisdom', happy_random_quote_path, method: :post %>
+			<%= render "button", title:'Pearl of Wisdom', path:happy_random_quote_path %>
 		</td>
 		<td>
-			<%= button_to 'Click for a funny', happy_random_joke_path, method: :post %>
+			<%#= button_to 'Click for a funny', happy_random_joke_path, method: :post %>
+			<%= render "button", title:'Click for a funny', path:happy_random_joke_path %>
 		</td>
 	</tr>
 </table>
